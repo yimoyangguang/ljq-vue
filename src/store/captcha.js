@@ -2,7 +2,7 @@ export default {
   captcha: null,
   appId: '2034696462',
   init(obj) {
-    debugger
+    
     let _self = this;
     return new Promise(function (resolve) {
       if (obj) {
@@ -37,11 +37,11 @@ export default {
     this.captcha && this.captcha.show()
   },
   destroy() {
-    debugger
+    
     this.captcha && this.captcha.destroy()
   },
   getTicket() {
-    debugger
+    
     this.captcha && this.captcha.getTicket()
   }
 }

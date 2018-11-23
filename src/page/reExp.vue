@@ -17,11 +17,11 @@ export default {
   computed: {
     fullname: {
       get: function() {
-        debugger
+        
         return this.firstname + this.lastname;
       },
       set: function(n) {
-        debugger
+        
         let names = n.split(",");
         this.firstname = names[0];
         this.lastname = names[names.length - 1];
@@ -34,7 +34,7 @@ export default {
   },
   methods: {
       a(){
-          debugger
+          
           this.fullname='John,Doe';
       }
   }

@@ -75,12 +75,12 @@ axios.interceptors.response.use(response => {
     }
     const tokens = await AxiosConfig.getToken(store);
     if (_data.code == '200') {
-      debugger
+      
       if (_data.data) {
         newData = _data.data
       } else {
         newData = Crypto.decrypt(_data.hexdata, tokens.access_token);
-        debugger
+        
         console.log(Crypto.decrypt(_data.hexdata, tokens.access_token), '----', Crypto)
       }
     } else {

@@ -48,7 +48,7 @@
         const _send = _self.sendModel
         _self.state.send = true;
         const post = _tab == 'email' ? 'email_verifycode_send' : 'sms_verifycode_send';
-        debugger
+        
         Captcha.init().then((res) => {
           if (res && res.ret == 0) {
             _send.randstr = res.randstr
@@ -76,7 +76,7 @@
           })
       },
       delaySend(_self, data) {
-        debugger
+        
         const _this = this;
         let _m = _self.state
         return new Promise(function (resolve) {

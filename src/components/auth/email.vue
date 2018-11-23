@@ -257,7 +257,7 @@
         _self.state.signup = true;
         _sign.password = crypto.md5String(_sign.password);
         delete _sign.passwordagain;
-        debugger
+        
         _self.$store.dispatch('user_user_signup', _sign).then((res) => {
           if (res.data) {
             _self.$toast({

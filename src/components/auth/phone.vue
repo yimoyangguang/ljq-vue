@@ -303,7 +303,7 @@
           })
       } ,
       getCode() {
-        debugger
+        
         console.log(this.state)
         const _this = this;
         if (_this.state.send) return
@@ -343,7 +343,7 @@
           } else {
             _this.$store.dispatch("user_user_exist", {phone: _this.signModel.phone}).then(({data}) => {
               if (data) {
-                debugger
+                
                 _this.state.send = false
                 _this.$toast({
                   message: '手机号码已存在',
@@ -351,7 +351,7 @@
                   duration: 5000
                 });
               } else {
-                debugger
+                
 
                 _this.$emit('register:sendCode', _this)
               }

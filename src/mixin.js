@@ -1,12 +1,14 @@
 export const mixin = {
   data() {
     return {
-      isShow: false
+      isShow: false,
+      phones:false
     }
   },
   methods: {
     changes() {
       console.log('mixin的方法')
-    }
+    },
+   
   }
 }

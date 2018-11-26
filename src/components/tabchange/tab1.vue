@@ -13,7 +13,7 @@
                 <div>{{selectedPost.content}}</div>
          </div>
          <div   class='fl' v-else>
-             {{$parent.abc}}点我
+            $parent用于获取 {{$parent.abc}}
          </div>
         </div>
      </div>
@@ -27,18 +27,18 @@ export default {
       posts: [
         {
           id: 1,
-          title: "庞",
-          content:'lao pang shi ge sha bi '
+          title: "标题1",   
+          content:'State，单一状态树，Vuex 使用单一状态树——是的，用一个对象就包含了全部的应用层级状态。'
         },
         {
           id: 2,
-          title: "傻",
-          content:'zhen de ye '
+          title: "标题2",
+          content:'单状态树和模块化并不冲突——在后面的章节里我们会讨论如何将状态和状态变更事件分布到各个子模块中 '
         },
         {
           id: 3,
-          title: "比",
-          content:'da jia dou jue de'
+          title: "标题3",
+          content:'然而，这种模式导致组件依赖全局状态单例。在模块化的构建系统中，在每个需要使用 state 的组件中需要频繁地导入，并且在测试组件时需要模拟状态。'
         }
       ],
       selectedPost: null

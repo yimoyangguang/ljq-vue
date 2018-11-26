@@ -2,8 +2,8 @@
  <div class="container">
      <div >
          <div>
-             <span @click='tabChange("tab1")'>tab1{{isShow}}</span>
-             <span  @click='tabChange("tab2")'>哈哈</span>
+             <span @click='tabChange("tab1")'>change1</span>
+             <span  @click='tabChange("tab2")'>change2</span>
             <keep-alive >
                 <tab1 v-if="chage" ></tab1>
                 <tab2 v-else></tab2>
@@ -23,7 +23,7 @@ export default {
   data() {
     return {
       chage: true,
-      abc:"12121212"
+      abc:"父组件的数据（abc）"
     };
   },
   components: {

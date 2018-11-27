@@ -1,7 +1,8 @@
 import axios from "./axios";
 
 export default {
-  async token({commit}, params) {
+  async token({commit,dispatch}, params) {
+      console.log(commit,'test',dispatch);
     return await axios.post('/connect/token', params);
   },
   async country({commit}, params) {

@@ -14,6 +14,8 @@
     "crypto-js": "^3.1.9-1",
     "element-ui": "^2.4.8",
     "mint-ui": "^2.2.13",
+    "number-precision": "^1.2.0",
+    "pubsub-js": "^1.7.0",
     "qs": "^6.5.2",
     "vue": "^2.5.2",
     "vue-awesome-swiper": "^3.1.3",

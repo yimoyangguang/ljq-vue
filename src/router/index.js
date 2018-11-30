@@ -9,6 +9,10 @@ import reExp from '@/page/paging/reExp'
 import keep from '@/page/paging/keepalive'
 import paging from '@/page/paging/index'
 import hover from '@/page/paging/hover'
+import pubsub from '@/page/paging/pubsub'
+import number from '@/page/paging/number'
+
+
 
 import '../assets/style/base.less'
 
@@ -26,5 +30,8 @@ export default new Router({
     {path: '/paging/keep', name: 'keep',component: keep}, 
     { path: '/paging',name: 'paging',component: paging},
     { path: '/paging/hover',name: 'hover',component: hover},
+    { path: '/paging/pubsub',name: 'pubsub',component: pubsub},
+    { path: '/paging/number',name: 'number',component: number},
+
   ]
 })

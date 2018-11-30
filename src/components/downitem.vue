@@ -1,6 +1,6 @@
 <template>
     <div class="down">
-    <router-link to="/paging/index">
+    <router-link to="/paging">
          <img src="../assets/images/down-item.png" alt="">
       </router-link>
     </div>

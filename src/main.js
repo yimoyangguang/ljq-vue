@@ -9,18 +9,15 @@ import Mint from 'mint-ui';
 import {
   Toast
 } from 'mint-ui';
-import {
-  Select,
-  Option,
-  Checkbox,
-  Dialog,
-  Input,
-  Loading,
-} from 'element-ui'
+import { Select,Option, Checkbox, Dialog,Input, Loading,} from 'element-ui'
+import Np from './plugins/np'
+import pubsub from './plugins/pubsub'
+
 
 import 'element-ui/lib/theme-chalk/index.css';
 import 'mint-ui/lib/style.css'
-
+Vue.use(Np);
+Vue.use(pubsub);
 Vue.component(Toast.name, Toast);
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false;
@@ -34,12 +31,15 @@ Vue.use(Checkbox)
 Vue.use(Dialog)
 Vue.use(Loading)
 Vue.use(Input)
-Vue.mixin({
+Vue.mixin({//混合
   data() {
     return {
       isShow: 'aa',
       phones: false,
-      windowH: ''
+      windowH: '',
+      a: 0.00000000458,
+      b: 0.0000125,
+      massage: ""
     }
   },
   methods: {
@@ -65,6 +65,7 @@ Vue.mixin({
     },
   },
   mounted() {
+    this.massage = this.$np.plus(this.a, this.b);
     this.isPhoneMobile();
     this.windowH = window.innerHeight;
   }
